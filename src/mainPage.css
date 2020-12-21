@@ -1,0 +1,13 @@
+
+.navbar {
+    width: 100%;
+    background-color: #3B1F2B;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: right;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.navbar-text {
+    padding: 1rem;
+}

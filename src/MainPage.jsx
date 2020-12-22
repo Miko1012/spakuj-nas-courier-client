@@ -4,13 +4,18 @@ import {getPackages, putPackage} from "./api";
 
 export const MainPage = () => {
 
-    const [packages, setPackages] = useState([]);
+    const [packages, setPackages] = useState([{
+        label_id: "ładuję...",
+        receiver: "ładuję...",
+        box: "ładuję...",
+        size: "ładuję...",
+        status: "ładuję..."
+    }]);
     const [links, setLinks] = useState([]);
 
     const loadPackages = async() => {
         try {
             let res = await getPackages();
-            console.log(res);
             setPackages(res.labels);
             let tlinks = {};
             for (const property in res._links) {
@@ -18,24 +23,21 @@ export const MainPage = () => {
                 if(splitted.length > 1) {
                     tlinks[splitted[0]] = res._links[property];
                     tlinks[splitted[0]].message = splitted[1];
-                    console.log(tlinks);
                 }
-                // console.log(property.split(':'));
             }
             setLinks(tlinks);
         } catch (e) {
-            console.log("ups!");
+            console.log("ups! coś poszło nie tak!");
         }
     };
 
     const modifyPackage = (href, e) => {
         e.preventDefault();
         try {
-            let res = putPackage(href);
+            putPackage(href);
         } catch (e) {
-            console.log("ups!");
+            console.log("ups! coś poszło nie tak!");
         }
-        console.log(href);
     }
 
     useEffect(() => {

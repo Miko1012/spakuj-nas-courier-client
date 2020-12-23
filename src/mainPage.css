@@ -1,0 +1,84 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.page {
+    background-image: url(./park.png);
+    background-size: cover;
+}
+.content {
+    padding: 3rem;
+    color: #3B1F2B;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 12.4rem);
+}
+.navbar {
+    width: 100%;
+    background-color: #3B1F2B;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: right;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.navbar-text {
+    padding: 1rem;
+}
+footer {
+    background-color: #3B1F2B;
+    color: #EFF9F0;
+    height: 3.25rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+footer a {
+    padding: 1rem;
+}
+a {
+    color: #EFF9F0;
+    text-decoration: none;
+}
+.title-div {
+    margin-bottom: 1rem;
+}
+.title {
+    color: #EFF9F0;
+    background-color: #3B1F2B;
+    font-size: 5rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+.description-div {
+    margin-bottom: 1rem;
+}
+.description {
+    color: #EFF9F0;
+    background-color: #3B1F2B;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    width: 50%;
+}
+.mt {
+    margin-top: 1rem;
+}
+.text {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    background-color: #FFE7CC;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+table {
+    background-color: #FFE7CC;
+    padding: 0.5rem;
+}
+th {
+    text-align: left;
+}
+table a {
+    background-color: #3B1F2B;
+    padding: 0.15rem 1rem;
+}
+table a:hover {
+    cursor: pointer;
+}

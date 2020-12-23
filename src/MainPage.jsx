@@ -35,7 +35,6 @@ export const MainPage = () => {
         e.preventDefault();
         try {
             const res = await putPackage(href);
-            console.log(res);
             if(res.message) {
                 window.location.reload();
             }

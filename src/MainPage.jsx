@@ -31,10 +31,14 @@ export const MainPage = () => {
         }
     };
 
-    const modifyPackage = (href, e) => {
+    const modifyPackage = async (href, e) => {
         e.preventDefault();
         try {
-            putPackage(href);
+            const res = await putPackage(href);
+            console.log(res);
+            if(res.message) {
+                window.location.reload();
+            }
         } catch (e) {
             console.log("ups! coś poszło nie tak!");
         }
